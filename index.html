@@ -12,29 +12,40 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#demo">Demo</a></li>
-                <li><a href="#opportunity">Opportunity</a></li>
-                <li><a href="#about">About Us</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/OUT!logo.png" alt="OUT! Logo" class="header-logo">
+            </div>
+            <div class="header-cta">
+                <a href="#opening-position" class="btn btn-secondary">See Opening Role</a>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <img src="assets/OUT!logo.png" alt="OUT! Logo" class="hero-logo-main">
-                <p class="tagline">Find People or Group to hangout!</p>
-                <a href="#demo" class="btn btn-primary">See Demo</a>
-            </div>
-        </section>
-
-        <section id="demo" class="content-section alt-bg">
-            <h2><i class="fas fa-play-circle"></i> See OUT! in Action</h2>
-            <div class="demo-section">
-                <div class="video-wrapper">
+        <section id="app-demo" class="hero-section">
+            <div class="container">
+                <div class="hero-flex">
+                    <div class="hero-content">
+                        <h1>The Only Social App for Real-Life Hangouts</h1>
+                        
+                        <div class="feature-item">
+                            <h3>Find People</h3>
+                            <p>✨ Swipe on interest-based stories to find your vibe.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h3>Find Groups</h3>
+                            <p>🎉 Post your hangout idea & let others join.</p>
+                        </div>
+                        
+                        <p class="long-description">OUT! is the first social media app for making friends that focuses on real-life casual hangouts.</p>
+                        
+                        <div class="hero-cta">
+                            <a href="#opening-position" class="btn btn-primary">See Opening Role</a>
+                        </div>
+                    </div>
+                    
                     <div class="video-container">
                         <video muted loop class="demo-video" id="demo-video" playsinline>
                             <source src="https://github.com/user-attachments/assets/97eba281-a38a-4b1f-aa27-4616df86ca4e" type="video/mp4">
@@ -42,91 +53,71 @@
                         </video>
                     </div>
                 </div>
-                <div class="demo-content">
-                    <div class="benefit-icons">
-                        <div class="benefit-item">
-                            <i class="fas fa-users"></i>
-                            <span>Make new connections</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-bolt"></i>
-                            <span>Spontaneous hangouts</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Find nearby activities</span>
-                        </div>
-                    </div>
-                    
-                    <p class="demo-headline">Get notifications when people want to hang out near you.</p>
-                    
-                    <p>Create a room or join others — OUT! makes it simple to connect with people who share your interests and are ready to meet right now.</p>
-                    
-                    <a href="#" class="btn btn-primary">Get the App</a>
-                </div>
             </div>
         </section>
 
-        <section id="opportunity" class="content-section">
-            <h2><i class="fas fa-rocket"></i> Market Opportunity</h2>
-            <p class="text-highlight"><strong>OUT! is the first mover for a social media app for making friends through casual & spontaneous hangouts.</strong></p>
-            <p class="text-center"><span class="badge">THERE IS NO DIRECT COMPETITOR</span> for OUT!</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-users feature-icon"></i>
-                    <p>Traditional Social Medias are for your existing connections, not the new ones</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-user-plus feature-icon"></i>
-                    <p>No one will follow you back on social media unless they already know you</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-bolt feature-icon"></i>
-                    <p>First App that focuses on casual & spontaneous hangout</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-bullseye feature-icon"></i>
-                    <p>We are the first-ever social media app that helps Gen Z hang out with new friends</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-calendar-alt feature-icon"></i>
-                    <p>Event apps like Meetup are for formal and scheduled events, which is not what we are focusing on</p>
+        <section id="opening-position" class="content-section">
+            <div class="container">
+                <h2>Opening Position</h2>
+                <div class="job-container">
+                    <div class="job-header">
+                        <h3>Chief Technology Officer (CTO)</h3>
+                    </div>
+                    
+                    <div class="job-section">
+                        <h4>Technical Requirements:</h4>
+                        <p>Experienced in:</p>
+                        <ul class="requirement-list">
+                            <li>System Design</li>
+                            <li>DevOps</li>
+                            <li>Scalable Cloud Server</li>
+                            <li>Microservices</li>
+                            <li>Strong Backend Background</li>
+                            <li>Database Design/Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-section">
+                        <h4>Tasks:</h4>
+                        <ul class="task-list">
+                            <li>Design the backend system</li>
+                            <li>Oversee other backend devs (we'll hire contract devs to help us)</li>
+                            <li>Work with contract backend developers</li>
+                            <li>Code reviews</li>
+                            <li>Integrate APIs/microservices into the system</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-section">
+                        <h4>Team Structure:</h4>
+                        <ul class="team-list">
+                            <li><strong>You (CTO):</strong> Backend integration & system architecture</li>
+                            <li><strong>Frontend/Mobile:</strong> Handled by Me (Born)</li>
+                            <li><strong>2 Contracted Backend Devs:</strong>
+                                <ul>
+                                    <li>Dev #1: Feed, Story, Chat, Profile APIs</li>
+                                    <li>Dev #2: User registration/auth, face verification, feed algorithm</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-section">
+                        <h4>And Good Stuff:</h4>
+                        <p class="equity-info">You will get the equity in the company 😎</p>
+                    </div>
+                    
+                    <div class="cta-container">
+                        <a href="https://www.instagram.com/rebayreborn/" class="btn btn-primary">Message Me</a>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <section id="about" class="content-section alt-bg">
-            <h2><i class="fas fa-info-circle"></i> About Us</h2>
-            <p>We are passionate about helping people connect in the real world. Our mission is to bring people together through spontaneous, fun meetups.</p>
-            
-            <div class="tech-stack">
-                <h3>Tech Stack <span class="badge">App</span></h3>
-                <div class="tech-cards">
-                    <div class="tech-card">
-                        <i class="fab fa-react"></i>
-                        <p>React Native (TypeScript)</p>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <p>Expo</p>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fas fa-chart-line"></i>
-                        <p>React Native Reanimated</p>
-                    </div>
-                </div>
-            </div>
-            
-            <p class="footnote"><em>📝 Note: This landing page is a quick demo, not production-grade. App UI/UX can be a lot more improved.</em></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 OUT! - All rights reserved.</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
+        <div class="container">
+            <p>&copy; 2024 OUT! - All rights reserved.</p>
         </div>
     </footer>
 

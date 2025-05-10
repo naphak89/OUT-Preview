@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 100,
+                    top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
             }
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     );
     
-    document.querySelectorAll('.content-section').forEach(section => {
+    document.querySelectorAll('.content-section, .hero-section').forEach(section => {
         observer.observe(section);
         section.classList.add('animate-on-scroll');
     });
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             },
             {
-                threshold: 0.7 // Start playing when 70% of the video is visible
+                threshold: 0.6 // Start playing when 60% of the video is visible
             }
         );
         
