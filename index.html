@@ -3,56 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OUT! - Spend Time Going Out</title>
+    <title>OUT! - Get Out With Cool People</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
+    <!-- Scrolling Text Banner -->
+    <div class="scrolling-banner">
+        <div class="scrolling-text">
+            <span>real friends • real hangouts • real fun</span>
+            <span>real friends • real hangouts • real fun</span>
+            <span>real friends • real hangouts • real fun</span>
+            <span>real friends • real hangouts • real fun</span>
+            <span>real friends • real hangouts • real fun</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
             <div class="logo">
-                <img src="assets/OUT!logo.png" alt="OUT! Logo" class="header-logo">
+                <img src="assets/OUT!logo.png" alt="OUT! Logo" class="logo-img">
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="app-demo" class="hero-section">
-            <div class="container">
-                <div class="hero-flex">
-                    <div class="hero-content">
-                        <h1>Find Individuals or Groups for Real-Life Spontaneous Hangouts</h1>
-                        
-                        <div class="feature-item">
-                            <h3>Find People</h3>
-                            <p>✨ Swipe on interest-based stories to find your vibe.</p>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <h3>Find Groups</h3>
-                            <p>🎉 Post your hangout idea & let others join.</p>
-                        </div>
-                        
-                        <p class="long-description">OUT! is the first social media app for making friends through real-life casual & spontaneous hangouts.</p>
-                    </div>
-                    
-                    <div class="video-container">
-                        <video muted loop class="demo-video" id="demo-video" playsinline>
-                            <source src="https://github.com/user-attachments/assets/97eba281-a38a-4b1f-aa27-4616df86ca4e" type="video/mp4">
-                            Your browser does not support the video tag.
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">An app that actually</span>
+                        <span class="title-line highlight">gets you out with cool people</span>
+                        <span class="title-line">doing stuff that you like</span>
+                    </h1>
+                    <p class="hero-subtitle">Because friendship isn't made on screens</p>
+                    <button class="coming-soon-btn">Coming Soon!</button>
+                </div>
+                <div class="hero-video">
+                    <div class="phone-mockup">
+                        <video autoplay muted loop playsinline class="demo-video">
+                            <source src="outmvpdemo.mp4" type="video/mp4">
                         </video>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="float-element">✨</div>
+                        <div class="float-element">🎉</div>
+                        <div class="float-element">🔥</div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 OUT! - All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/OUT!logo.png" alt="OUT! Logo">
+                </div>
+                <p>&copy; 2025 OUT! - Made with ❤️ for real connections</p>
+            </div>
         </div>
     </footer>
 
