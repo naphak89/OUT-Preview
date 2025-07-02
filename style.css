@@ -188,9 +188,7 @@ header {
     line-height: 1.5;
 }
 
-.hero-cta {
-    margin: 1rem 0 0;
-}
+
 
 .video-container {
     flex: 1;
@@ -243,97 +241,7 @@ header {
     transform: translateY(-0.3125rem);
 }
 
-/* Content Sections */
-.content-section {
-    padding: 6rem 0;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.03);
-}
 
-.content-section h2 {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    margin-bottom: 2.5rem;
-    text-align: center;
-    font-weight: 700;
-}
-
-/* Job Position Styles */
-.job-container {
-    max-width: 40rem;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: var(--border-radius);
-    padding: 2.5rem;
-    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.2);
-}
-
-.job-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.job-header h3 {
-    font-size: 2rem;
-    margin: 0;
-    font-weight: 700;
-}
-
-.job-section {
-    margin-bottom: 2.5rem;
-}
-
-.job-section h4 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    color: var(--accent-color);
-}
-
-.requirement-list, 
-.task-list, 
-.team-list {
-    list-style: none;
-    padding-left: 1.5rem;
-    margin: 0;
-}
-
-.requirement-list li, 
-.task-list li, 
-.team-list li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    font-size: 1.125rem;
-}
-
-.requirement-list li::before, 
-.task-list li::before, 
-.team-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-}
-
-.team-list ul {
-    list-style: none;
-    padding-left: 1.5rem;
-    margin-top: 0.75rem;
-}
-
-.team-list ul li {
-    margin-bottom: 0.5rem;
-}
-
-.team-list ul li::before {
-    content: '-';
-}
-
-.cta-container {
-    text-align: center;
-    margin-top: 3rem;
-}
 
 /* Footer */
 footer {
@@ -450,10 +358,7 @@ footer {
         max-width: 100%;
     }
     
-    .job-container {
-        padding: 1.5rem;
-        max-width: 100%;
-    }
+
 }
 
 @media (max-width: 30rem) {
@@ -491,24 +396,4 @@ footer {
         width: 16rem;
     }
     
-    .job-header h3 {
-        font-size: 1.5rem;
-    }
-    
-    .requirement-list li, 
-    .task-list li, 
-    .team-list li {
-        font-size: 0.875rem;
-        padding-left: 1.25rem;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-    }
-}
-
-/* Job Section Styling */
-.equity-info {
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: var(--accent-color);
-    margin-top: 0.5rem;
 } 
