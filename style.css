@@ -41,26 +41,28 @@ body {
     background: var(--gradient-1);
     padding: 15px 0;
     overflow: hidden;
-    position: relative;
-    white-space: nowrap;
+    width: 100%;
 }
 
 .scrolling-text {
+    white-space: nowrap;
     display: inline-block;
+    overflow: hidden;
     animation: scroll 15s linear infinite;
+    
+}
+
+.scrolling-text p {
+    display: inline-block;
+    
     font-weight: 700;
     font-size: 18px;
     color: white;
-    white-space: nowrap;
-}
-
-.scrolling-text span {
-    margin-right: 50px;
 }
 
 @keyframes scroll {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translate3d(0,0,0); }
+    100% { transform: translate3d(-50%, 0,0); }
 }
 
 /* Header */
