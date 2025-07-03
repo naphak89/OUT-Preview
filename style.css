@@ -110,6 +110,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    position: relative;
 }
 
 .hero-title {
@@ -117,6 +118,7 @@ body {
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.02em;
+    position: relative;
 }
 
 .title-line {
@@ -207,21 +209,21 @@ body {
 }
 
 .float-element:nth-child(1) {
-    top: 20%;
-    left: 10%;
+    top: -10px;
+    left: -40px;
     animation-delay: 0s;
 }
 
 .float-element:nth-child(2) {
-    top: 60%;
-    right: 10%;
-    animation-delay: 1.5s;
+    top: 10%;
+    right: -40px;
+    animation-delay: 1s;
 }
 
 .float-element:nth-child(3) {
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 3s;
+    bottom: -10px;
+    left: -30px;
+    animation-delay: 2s;
 }
 
 @keyframes float {
@@ -265,12 +267,12 @@ body {
     }
     
     .hero-text {
-        order: 2;
+        order: 1;
         align-items: center;
     }
     
     .hero-video {
-        order: 1;
+        order: 2;
     }
     
     .phone-mockup {
@@ -329,6 +331,15 @@ body {
         font-size: 16px;
         margin: 0 auto;
     }
+    
+    /* Smaller emojis & reposition on mobile */
+    .float-element {
+        font-size: 24px;
+    }
+
+    .float-element:nth-child(1) { top: -5px; left: -20px; }
+    .float-element:nth-child(2) { top: 15%; right: -20px; }
+    .float-element:nth-child(3) { bottom: -5px; left: -15px; }
 }
 
 @media (max-width: 480px) {
