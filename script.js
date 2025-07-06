@@ -84,4 +84,40 @@ document.addEventListener('DOMContentLoaded', function() {
         
         videoObserver.observe(videoElement);
     }
+
+    // Rotating hero text
+    const phrases = [
+        "grab dinner",
+        "go to the beach",
+        "watch a football game",
+        "go clubbing"
+    ];
+    const rotatingText = document.getElementById('rotating-text');
+    if (rotatingText) {
+        let phraseIndex = 0;
+
+        const switchPhrase = () => {
+            // Add pop-out animation
+            rotatingText.classList.add('rotate-pop-out');
+
+            // After pop-out ends, change text and run pop-in
+            setTimeout(() => {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                rotatingText.textContent = phrases[phraseIndex];
+
+                rotatingText.classList.remove('rotate-pop-out');
+                void rotatingText.offsetWidth;
+                rotatingText.classList.add('rotate-pop-in');
+
+                setTimeout(() => rotatingText.classList.remove('rotate-pop-in'), 300);
+            }, 150);
+        };
+
+        // Initial pop-in
+        rotatingText.classList.add('rotate-pop-in');
+        setTimeout(() => rotatingText.classList.remove('rotate-pop-in'), 400);
+
+        // Start interval
+        setInterval(switchPhrase, 1500);
+    }
 }); 
