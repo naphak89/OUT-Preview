@@ -53,32 +53,65 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoElement = document.getElementById('demo-video');
     
     if (videoElement) {
+        // Add debugging
+        videoElement.addEventListener('loadstart', () => console.log('Video: loadstart'));
+        videoElement.addEventListener('loadeddata', () => console.log('Video: loadeddata'));
+        videoElement.addEventListener('canplay', () => console.log('Video: canplay'));
+        videoElement.addEventListener('playing', () => console.log('Video: playing'));
+        videoElement.addEventListener('error', (e) => console.error('Video error:', e));
+        
+        // Try to load and play the video
+        videoElement.load();
+        
+        // Try to play video immediately on load
+        videoElement.play().catch(e => {
+            console.log('Initial autoplay prevented:', e);
+        });
+        
         const videoObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Wait a short moment to start playing for better UX
-                        setTimeout(() => {
-                            videoElement.play().catch(e => {
-                                console.log('Autoplay prevented:', e);
-                                // Add play button if autoplay is prevented by browser
-                                const videoContainer = entry.target.closest('.video-container');
-                                if (videoContainer && !videoContainer.querySelector('.play-button')) {
-                                    const playButton = document.createElement('button');
-                                    playButton.className = 'play-button';
-                                    playButton.innerHTML = '<i class="fas fa-play"></i>';
-                                    playButton.addEventListener('click', () => videoElement.play());
-                                    videoContainer.appendChild(playButton);
-                                }
-                            });
-                        }, 300);
+                        // Try to play video when it comes into view
+                        videoElement.play().catch(e => {
+                            console.log('Intersection autoplay prevented:', e);
+                            // Add play button if autoplay is prevented by browser
+                            const videoContainer = entry.target.closest('.phone-mockup');
+                            if (videoContainer && !videoContainer.querySelector('.play-button')) {
+                                const playButton = document.createElement('button');
+                                playButton.className = 'play-button';
+                                playButton.innerHTML = '▶️';
+                                playButton.style.cssText = `
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    background: rgba(255, 107, 53, 0.9);
+                                    border: none;
+                                    border-radius: 50%;
+                                    width: 60px;
+                                    height: 60px;
+                                    font-size: 24px;
+                                    cursor: pointer;
+                                    z-index: 10;
+                                    transition: all 0.3s ease;
+                                `;
+                                playButton.addEventListener('click', () => {
+                                    videoElement.play();
+                                    playButton.style.display = 'none';
+                                });
+                                videoContainer.style.position = 'relative';
+                                videoContainer.appendChild(playButton);
+                            }
+                        });
                     } else {
+                        // Pause video when it's not visible
                         videoElement.pause();
                     }
                 });
             },
             {
-                threshold: 0.6 // Start playing when 60% of the video is visible
+                threshold: 0.3 // Start playing when 30% of the video is visible
             }
         );
         
