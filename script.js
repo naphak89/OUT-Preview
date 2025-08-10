@@ -5,13 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add scroll animation for navbar
     const navbar = document.querySelector('.navbar');
     
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
     
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -153,4 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Start interval
         setInterval(switchPhrase, 1500);
     }
+
+    // Performance: remove mousemove parallax and reactive background to avoid jank
 }); 
